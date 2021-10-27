@@ -1,13 +1,15 @@
 package cn.lonecloud.dynamic.datasource.demo;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DynamicDatasourceDemoApplication {
+@MapperScan("cn.lonecloud.dynamic.datasource.demo.**.demo")
+public class Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(DynamicDatasourceDemoApplication.class, args);
+        SpringApplication.run(Application.class, args);
     }
 
 }
