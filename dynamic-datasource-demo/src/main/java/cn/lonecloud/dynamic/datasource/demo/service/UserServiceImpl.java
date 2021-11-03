@@ -34,9 +34,9 @@ public class UserServiceImpl implements UserService{
     public Map<String, List<String>> selectMix() {
         List<String> userName = userMapper.getUserName();
         List<String> strings = userMapper.selectPgList();
-        Map<String,List<String>> dataMpa=new HashMap<>();
-        dataMpa.put("mysql",userName);
-        dataMpa.put("pg",strings);
-        return dataMpa;
+        Map<String,List<String>> dataMap=new HashMap<>();
+        dataMap.put("mysql",userName);
+        dataMap.put("pg",strings);
+        return dataMap;
     }
 }
